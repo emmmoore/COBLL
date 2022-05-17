@@ -1,15 +1,8 @@
-#include <iostream>
-#include <stdio.h>
 #include "Driver.h"
 
-// Populates struct Program with info about it
 int Driver::IdentificationHandler() {
-	if (this->filename == "")
-		std::cout << "Filename is empty in ID Handler" << std::endl;
-	else
-		std::cout << this <<"File name according to Identification Handler: "<< this->filename << std::endl;
-	std::ifstream idstream(this->filename);
-	AdvanceToLine(idstream, Divisions[0].startline);
+	std::ifstream InputFile(this->filename);
+	AdvanceToLine(InputFile, Divisions[0].startline);
 	int status = 0;
 
 	line = "";
@@ -20,19 +13,17 @@ int Driver::IdentificationHandler() {
 
 	int endline = Divisions[0].endline;
 
-	while (idstream.peek() != EOF && linenumber <= endline) {
+	while (InputFile.peek() != EOF && linenumber <= endline) {
 		line = "";
-		while (idstream.peek() != EOF) {
-			idstream.get(c);
+		while (InputFile.peek() != EOF) {
+			InputFile.get(c);
 			if (c == '\n')
 				break;
 			line += c;
 		}
 
-		std::cout << "Line number " << linenumber << std::endl;
 		if (linenumber == Divisions[0].startline) {
 			linenumber++;
-			std::cout << "found start of div" << std::endl;
 			continue;
 		}
 		//
@@ -77,7 +68,7 @@ int Driver::IdentificationHandler() {
 		linenumber++;
 	}
 	std::cout << IDInformation() << std::endl;
-	idstream.close();
+	InputFile.close();
 	return status;
 }
 

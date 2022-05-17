@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) {
 	std::cout << "Working..." << std::endl;
 
 	Driver *drivers[argc];
-	std::cout << "Driver array initialized" << std::endl;
 
 	for (int i = 1; i < argc; i++) {
 		// Check the file is a COBOL file
@@ -30,10 +29,8 @@ int main(int argc, char *argv[]) {
 		Driver temp = Driver(argv[i]);
 		drivers[i] = &temp;
 
-		std::cout << (*drivers[0]).filename << std::endl;
-
 		// Compile the file
-		int status = (*drivers[i]).DriverMain();
+		int status = (*drivers[i]).Compile();
 		if (status != 0) {
 
 			std::cout << "One or more of the files could not be compiled." << std::endl;
