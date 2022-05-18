@@ -39,19 +39,39 @@ public:
 	 */
 	Driver& operator=(Driver other);
 private:
-//	std::ifstream InputFile;
-	ProgramInfo Program;
+	/**
+	 * Stores locations of divisions
+	 */
 	DivisionInfo Divisions[4];
+	/**
+	 * Stores filename of source
+	 */
 	std::string filename;
 
+	/**
+	 * Stores current line number
+	 */
 	int linenumber;
+	/**
+	 * Stores current line
+	 */
 	std::string line;
 	/*
 	 * Moves to the desired position in the file
 	 */
 	std::ifstream& AdvanceToLine(std::ifstream& file, int number);
 
+	/**
+	 * Handles Identification Division
+	 */
 	int IdentificationHandler();
+	/**
+	 * Contains ID Division metadata
+	 */
+	ProgramInfo Program;
+	/**
+	 * Testing: Returns ID Division metadata
+	 */
 	std::string IDInformation();
 
 };
