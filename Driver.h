@@ -74,6 +74,18 @@ private:
 	 */
 	std::string IDInformation();
 
+
+	/**
+	 * Holds token value
+	 */
+	std::string strVal = "";
+	double douVal = 0.0;
+	int intVal= 0;
+
+	/**
+	 * Handles Procedure Division
+	 */
+	int ProcedureHandler();
 };
 
 #endif /* DRIVER_H */

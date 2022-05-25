@@ -16,7 +16,6 @@ Driver::Driver() {
 	Divisions[1].name = "ENVIRONMENT";
 	Divisions[2].name = "DATA";
 	Divisions[3].name = "PROCEDURE";
-
 }
 
 Driver::Driver(const Driver& other) {
