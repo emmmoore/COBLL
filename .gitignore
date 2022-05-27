@@ -1,3 +1,6 @@
 .vscode
 .vscode/
 .vscode/*
+a.out
+*.o
+*.h.gch
