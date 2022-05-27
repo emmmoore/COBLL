@@ -12,12 +12,11 @@
 // TODO: Create functionality to generate tree
 
 enum ProcToken {
-	empty = 0,
-	display = -1,
-	strlit = -2,
-	ext = -3,
-
-	eof = 1
+	empty,
+	display,
+	strlit,
+	ext,
+	eof
 };
 
 namespace {
