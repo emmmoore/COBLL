@@ -55,6 +55,15 @@ namespace {
 
 		return empty;
 	}
+
+	std::unique_ptr<ASTNode> LogError(const char *Str) {
+	  fprintf(stderr, "LogError: %s\n", Str);
+	  return nullptr;
+	}
+	std::unique_ptr<ASTNode> LogErrorP(const char *Str) {
+	  LogError(Str);
+	  return nullptr;
+	}
 }
 
 int Driver::ProcedureHandler() {
