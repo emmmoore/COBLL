@@ -9,8 +9,16 @@ Inheritance diagram for Fn\+Node\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_fn_node_a4bf692b84ec65c2b1ec471e22f0a3cc9}{Fn\+Node}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_fn_header_node}{Fn\+Header\+Node}} $>$ header, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_s_t_node}{ASTNode}} $>$ body)
+\mbox{\hyperlink{class_fn_node_a4bf692b84ec65c2b1ec471e22f0a3cc9}{Fn\+Node}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_fn_header_node}{Fn\+Header\+Node}} $>$ \mbox{\hyperlink{class_fn_node_a453635aeccc571b8d3459ab9f31497a4}{header}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_s_t_node}{ASTNode}} $>$ \mbox{\hyperlink{class_fn_node_abcba8630bba84d0ecaba772ef1e72570}{body}})
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_fn_header_node}{Fn\+Header\+Node}} $>$ \mbox{\hyperlink{class_fn_node_a453635aeccc571b8d3459ab9f31497a4}{header}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_s_t_node}{ASTNode}} $>$ \mbox{\hyperlink{class_fn_node_abcba8630bba84d0ecaba772ef1e72570}{body}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -32,6 +40,21 @@ Creates a \mbox{\hyperlink{class_fn_node}{Fn\+Node}} with a specified header and
 {\em body} & A portion of an Abstract Syntax Tree representing the functionality of the function. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fn_node_abcba8630bba84d0ecaba772ef1e72570}\label{class_fn_node_abcba8630bba84d0ecaba772ef1e72570}} 
+\index{FnNode@{FnNode}!body@{body}}
+\index{body@{body}!FnNode@{FnNode}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_s_t_node}{ASTNode}}$>$ Fn\+Node\+::body\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fn_node_a453635aeccc571b8d3459ab9f31497a4}\label{class_fn_node_a453635aeccc571b8d3459ab9f31497a4}} 
+\index{FnNode@{FnNode}!header@{header}}
+\index{header@{header}!FnNode@{FnNode}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_fn_header_node}{Fn\+Header\+Node}}$>$ Fn\+Node\+::header\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

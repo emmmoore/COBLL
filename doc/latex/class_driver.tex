@@ -17,6 +17,32 @@ int \mbox{\hyperlink{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}{Compile}} (
 \item 
 \mbox{\hyperlink{class_driver}{Driver}} \& \mbox{\hyperlink{class_driver_a207294fe98a2b4b75e91d2621302c623}{operator=}} (\mbox{\hyperlink{class_driver}{Driver}} other)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ifstream \& \mbox{\hyperlink{class_driver_af9577e21f98a7d957ad31245d708e50a}{Advance\+To\+Line}} (std\+::ifstream \&file, int number)
+\item 
+int \mbox{\hyperlink{class_driver_ab12e75537645b54536110539e2094ea0}{Identification\+Handler}} ()
+\item 
+int \mbox{\hyperlink{class_driver_a1fcfd450a42ccc334a45d48f679c4481}{Procedure\+Handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_division_info}{Division\+Info}} \mbox{\hyperlink{class_driver_a5e573d6b21d96592cbf8805f02d1b58f}{Divisions}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/-\/-\/--- NON-\/\+DIVISION-\/\+SPECIFIC -\/-\/-\/-\/-\/--- /// \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_driver_aa928750ade4cbfd7a0f697d4ffebc0a6}{filename}}
+\item 
+int \mbox{\hyperlink{class_driver_a76ee9585d52e0a21e34de4db41c6bef1}{linenumber}}
+\item 
+std\+::string \mbox{\hyperlink{class_driver_a0f5cccc9e215824bddc2acf6e85bdb07}{line}}
+\item 
+\mbox{\hyperlink{struct_program_info}{Program\+Info}} \mbox{\hyperlink{class_driver_ae6a556228fe5532da7b4b30a781c762b}{Program}}
+\item 
+std\+::string \mbox{\hyperlink{class_driver_acc531f0a95c120d1a99d8dfcec7628fb}{str\+Val}} = \char`\"{}\char`\"{}
+\item 
+int \mbox{\hyperlink{class_driver_aa0b4e9456288a530217380617125f07d}{int\+Val}} = 0
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -58,23 +84,104 @@ Constructs a \mbox{\hyperlink{class_driver}{Driver}} from a given file name.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_driver_af9577e21f98a7d957ad31245d708e50a}\label{class_driver_af9577e21f98a7d957ad31245d708e50a}} 
+\index{Driver@{Driver}!AdvanceToLine@{AdvanceToLine}}
+\index{AdvanceToLine@{AdvanceToLine}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{AdvanceToLine()}{AdvanceToLine()}}
+{\footnotesize\ttfamily std\+::ifstream \& Driver\+::\+Advance\+To\+Line (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file,  }\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Moves the file stream to the specified line number. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The ifstream object to be moved to a different line. \\
+\hline
+{\em number} & The line to be moved to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ifstream that was manipulated. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}\label{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}} 
 \index{Driver@{Driver}!Compile@{Compile}}
 \index{Compile@{Compile}!Driver@{Driver}}
 \doxysubsubsection{\texorpdfstring{Compile()}{Compile()}}
 {\footnotesize\ttfamily int Driver\+::\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Compiles the file. \mbox{\Hypertarget{class_driver_a207294fe98a2b4b75e91d2621302c623}\label{class_driver_a207294fe98a2b4b75e91d2621302c623}} 
+Compiles the file. \mbox{\Hypertarget{class_driver_ab12e75537645b54536110539e2094ea0}\label{class_driver_ab12e75537645b54536110539e2094ea0}} 
+\index{Driver@{Driver}!IdentificationHandler@{IdentificationHandler}}
+\index{IdentificationHandler@{IdentificationHandler}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{IdentificationHandler()}{IdentificationHandler()}}
+{\footnotesize\ttfamily int Driver\+::\+Identification\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Handles the lexing and parsing of the Identification Division, storing information in Program.
+
+Since the Identification Division is a set of key-\/value pairs describing metadata about the program, no Abstract Syntax Tree, code generation, or optimization is required. The information in this Division is stored, but will often be unused (except for documentation and debugging purposes). \mbox{\Hypertarget{class_driver_a207294fe98a2b4b75e91d2621302c623}\label{class_driver_a207294fe98a2b4b75e91d2621302c623}} 
 \index{Driver@{Driver}!operator=@{operator=}}
 \index{operator=@{operator=}!Driver@{Driver}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_driver}{Driver}} \& Driver\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_driver}{Driver}}}]{other }\end{DoxyParamCaption})}
 
-Overrides the implicit copy assignment operator. 
+Overrides the implicit copy assignment operator. \mbox{\Hypertarget{class_driver_a1fcfd450a42ccc334a45d48f679c4481}\label{class_driver_a1fcfd450a42ccc334a45d48f679c4481}} 
+\index{Driver@{Driver}!ProcedureHandler@{ProcedureHandler}}
+\index{ProcedureHandler@{ProcedureHandler}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{ProcedureHandler()}{ProcedureHandler()}}
+{\footnotesize\ttfamily int Driver\+::\+Procedure\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Handles the lexing and parsing of the Procedure Division.
+
+Parsing will rely heavily on Abstract Syntax Tree generation and the \mbox{\hyperlink{class_a_s_t_node}{ASTNode}} class hierarchy. This function will also handle the code generation and optimization of Procedure Division code. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_driver_a5e573d6b21d96592cbf8805f02d1b58f}\label{class_driver_a5e573d6b21d96592cbf8805f02d1b58f}} 
+\index{Driver@{Driver}!Divisions@{Divisions}}
+\index{Divisions@{Divisions}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{Divisions}{Divisions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_division_info}{Division\+Info}} Driver\+::\+Divisions\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+-\/-\/-\/-\/-\/--- NON-\/\+DIVISION-\/\+SPECIFIC -\/-\/-\/-\/-\/--- /// 
+
+Stores the division information for each COBOL division. \mbox{\Hypertarget{class_driver_aa928750ade4cbfd7a0f697d4ffebc0a6}\label{class_driver_aa928750ade4cbfd7a0f697d4ffebc0a6}} 
+\index{Driver@{Driver}!filename@{filename}}
+\index{filename@{filename}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string Driver\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+The file name of the COBOL File. \mbox{\Hypertarget{class_driver_aa0b4e9456288a530217380617125f07d}\label{class_driver_aa0b4e9456288a530217380617125f07d}} 
+\index{Driver@{Driver}!intVal@{intVal}}
+\index{intVal@{intVal}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{intVal}{intVal}}
+{\footnotesize\ttfamily int Driver\+::int\+Val = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the numerical value of the most recent numerical token. \mbox{\Hypertarget{class_driver_a0f5cccc9e215824bddc2acf6e85bdb07}\label{class_driver_a0f5cccc9e215824bddc2acf6e85bdb07}} 
+\index{Driver@{Driver}!line@{line}}
+\index{line@{line}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily std\+::string Driver\+::line\hspace{0.3cm}{\ttfamily [private]}}
+
+The current line in use. \mbox{\Hypertarget{class_driver_a76ee9585d52e0a21e34de4db41c6bef1}\label{class_driver_a76ee9585d52e0a21e34de4db41c6bef1}} 
+\index{Driver@{Driver}!linenumber@{linenumber}}
+\index{linenumber@{linenumber}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{linenumber}{linenumber}}
+{\footnotesize\ttfamily int Driver\+::linenumber\hspace{0.3cm}{\ttfamily [private]}}
+
+The current line number in use. \mbox{\Hypertarget{class_driver_ae6a556228fe5532da7b4b30a781c762b}\label{class_driver_ae6a556228fe5532da7b4b30a781c762b}} 
+\index{Driver@{Driver}!Program@{Program}}
+\index{Program@{Program}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{Program}{Program}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_program_info}{Program\+Info}} Driver\+::\+Program\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the information about the program found within the Identification Division. \mbox{\Hypertarget{class_driver_acc531f0a95c120d1a99d8dfcec7628fb}\label{class_driver_acc531f0a95c120d1a99d8dfcec7628fb}} 
+\index{Driver@{Driver}!strVal@{strVal}}
+\index{strVal@{strVal}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{strVal}{strVal}}
+{\footnotesize\ttfamily std\+::string Driver\+::str\+Val = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the String value of the most recent String token. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_driver_8h}{Driver.\+h}}\item 
 \mbox{\hyperlink{_driver_8cpp}{Driver.\+cpp}}\item 
-Identification\+Handler.\+cpp\item 
-Procedure\+Handler.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_identification_handler_8cpp}{Identification\+Handler.\+cpp}}\item 
+\mbox{\hyperlink{_procedure_handler_8cpp}{Procedure\+Handler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../_c_o_b_l_l_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'COBLL.cpp']]]
+  ['getname_0',['getName',['../class_fn_header_node.html#a14d68c55283c66ce27106c4cb92b9944',1,'FnHeaderNode']]]
 ];

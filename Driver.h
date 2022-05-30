@@ -81,7 +81,7 @@ private:
 	///
 	std::ifstream& AdvanceToLine(std::ifstream& file, int number);
 
-	/// -------- IDENTIFICATION DIVISION -------- ///
+
 
 	///
 	/// Handles the lexing and parsing of the Identification Division, storing information in Program.
@@ -97,7 +97,7 @@ private:
 	///
 	ProgramInfo Program;
 
-	/// -------- PROCEDURE DIVISION -------- ///
+
 
 	///
 	/// Handles the lexing and parsing of the Procedure Division.
