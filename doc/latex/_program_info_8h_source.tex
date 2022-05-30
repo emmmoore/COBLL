@@ -1,0 +1,49 @@
+\hypertarget{_program_info_8h_source}{}\doxysection{Program\+Info.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * ProgramInfo.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: May 16, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: elanor}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef PROGRAMINFO\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define PROGRAMINFO\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_program_info}{ProgramInfo}} \{}
+\DoxyCodeLine{15     std::string id;}
+\DoxyCodeLine{16     std::string author;}
+\DoxyCodeLine{17     std::string installation;}
+\DoxyCodeLine{18     std::string datewritten;}
+\DoxyCodeLine{19     std::string datecompiled;}
+\DoxyCodeLine{20     std::string security;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \mbox{\hyperlink{struct_program_info}{ProgramInfo}}() \{}
+\DoxyCodeLine{23         \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}Unspecified Program"{}};}
+\DoxyCodeLine{24         author = \textcolor{stringliteral}{"{}Unspecified Author"{}};}
+\DoxyCodeLine{25         installation = \textcolor{stringliteral}{"{}Unspecified Installation"{}};}
+\DoxyCodeLine{26         datewritten = \textcolor{stringliteral}{"{}Unspecified Date Written"{}};}
+\DoxyCodeLine{27         datecompiled = \textcolor{stringliteral}{"{}Unspecified Date Compiled"{}};}
+\DoxyCodeLine{28         security = \textcolor{stringliteral}{"{}Unspecified Security"{}};}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_program_info}{ProgramInfo}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& pi): id(pi.id) \{\}}
+\DoxyCodeLine{31     \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& operator=(\mbox{\hyperlink{struct_program_info}{ProgramInfo}} other) \{}
+\DoxyCodeLine{32         this-\/>\textcolor{keywordtype}{id} = other.id;}
+\DoxyCodeLine{33         this-\/>author = other.author;}
+\DoxyCodeLine{34         this-\/>installation = other.installation;}
+\DoxyCodeLine{35         this-\/>datewritten = other.datewritten;}
+\DoxyCodeLine{36         this-\/>datecompiled = other.datecompiled;}
+\DoxyCodeLine{37         this-\/>security = other.security;}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PROGRAMINFO\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
