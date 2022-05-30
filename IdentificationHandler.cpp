@@ -67,20 +67,7 @@ int Driver::IdentificationHandler() {
 
 		linenumber++;
 	}
-	std::cout << IDInformation() << std::endl;
+	std::cout << Program.to_string() << std::endl;
 	InputFile.close();
 	return status;
-}
-
-std::string Driver::IDInformation() {
-		std::string info = "";
-
-		info += "Program ID: " + Program.id + "\n";
-		info += "Author: " + Program.author + "\n";
-		info += "Installation: " + Program.installation + "\n";
-		info += "Date Written: " + Program.datewritten + "\n";
-		info += "Date Compiled: " + Program.datecompiled + "\n";
-		info += "Security: " + Program.security + "\n";
-
-		return info;
 }

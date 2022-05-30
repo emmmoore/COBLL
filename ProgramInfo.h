@@ -37,6 +37,24 @@ struct ProgramInfo {
 		this->security = other.security;
 		return *this;
 	}
+
+	///
+	/// Returns a String representation of a ProgramInfo containing the information in its fields.
+	///
+	/// The representation is a multi-line block with one key-value pair on each line.
+	///
+	std::string to_string() {
+		std::string info = "";
+
+		info += "Program ID: " + id + "\n";
+		info += "Author: " + author + "\n";
+		info += "Installation: " + installation + "\n";
+		info += "Date Written: " + datewritten + "\n";
+		info += "Date Compiled: " + datecompiled + "\n";
+		info += "Security: " + security + "\n";
+
+		return info;
+	}
 };
 
 
