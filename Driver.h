@@ -1,9 +1,9 @@
-/*
- * Driver.h
- *
- *  Created on: Apr 20, 2022
- *      Author: elanor
- */
+///
+/// \file
+/// This file contains the declaration of the Driver class, which handles the compilation of one COBOL file.
+/// @author Elanor Moore
+///
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -13,79 +13,110 @@
 #ifndef DRIVER_H
 #define DRIVER_H
 
+///
+/// Controls the reading and compilation of a COBOL file, start to finish.
+///
+/// When constructed, a Driver identifies the location of each COBOL division present in the file. To compile, the
+/// Compile function then calls its own handler function for each division, which lexes, parses, generates code
+/// for, and optimizes for that division.
+///
 class Driver {
 public:
-	/**
-	 * No-args constructor
-	 *
-	 */
+	///
+	/// Constructs a generic Driver not corresponding to a file.
+	///
 	Driver();
-	/*
-	 * Copy constructor
-	 *
-	 */
-	Driver(std::string FileName);
-	/*
-	 * Constructs a Driver from a given filename
-	 * Conducts first pass to identify division locations
-	 */
+
+	///
+	/// Constructs a Driver as a copy of another Driver.
+	///
+	/// The Driver constructed gets the filename, program information, division information and line number
+	/// from the Driver being copied.
+	/// @param &other the Driver to be copied.
 	Driver(const Driver& other);
-	/*
-	 * Compiles each division
-	 */
+
+	///
+	/// Constructs a Driver from a given file name.
+	/// @param FileName The name of the COBOL file to be compiled.
+	///
+	Driver(std::string FileName);
+
+	///
+	/// Compiles the file.
+	///
 	int Compile();
-	/*
-	 * Implicit copy operator
-	 */
+
+	///
+	/// Overrides the implicit copy assignment operator.
+	///
+
 	Driver& operator=(Driver other);
 private:
-	/**
-	 * Stores locations of divisions
-	 */
+	/// -------- NON-DIVISION-SPECIFIC -------- ///
+
+	///
+	/// Stores the division information for each COBOL division.
+	///
 	DivisionInfo Divisions[4];
-	/**
-	 * Stores filename of source
-	 */
+	///
+	/// The file name of the COBOL File.
+	///
 	std::string filename;
 
-	/**
-	 * Stores current line number
-	 */
+	///
+	/// The current line number in use.
+	///
 	int linenumber;
-	/**
-	 * Stores current line
-	 */
+
+	///
+	/// The current line in use.
+	///
 	std::string line;
-	/*
-	 * Moves to the desired position in the file
-	 */
+
+	///
+	/// Moves the file stream to the specified line number.
+	/// @param file The ifstream object to be moved to a different line.
+	/// @param number The line to be moved to.
+	/// @returns The ifstream that was manipulated.
+	///
 	std::ifstream& AdvanceToLine(std::ifstream& file, int number);
 
-	/**
-	 * Handles Identification Division
-	 */
+	/// -------- IDENTIFICATION DIVISION -------- ///
+
+	///
+	/// Handles the lexing and parsing of the Identification Division, storing information in Program.
+	///
+	/// Since the Identification Division is a set of key-value pairs describing metadata about the program,
+	/// no Abstract Syntax Tree, code generation, or optimization is required. The information in this
+	/// Division is stored, but will often be unused (except for documentation and debugging purposes).
+	///
 	int IdentificationHandler();
-	/**
-	 * Contains ID Division metadata
-	 */
+
+	///
+	/// Stores the information about the program found within the Identification Division.
+	///
 	ProgramInfo Program;
-	/**
-	 * Testing: Returns ID Division metadata
-	 */
-	std::string IDInformation();
 
+	/// -------- PROCEDURE DIVISION -------- ///
 
-	/**
-	 * Holds token value
-	 */
+	///
+	/// Handles the lexing and parsing of the Procedure Division.
+	///
+	/// Parsing will rely heavily on Abstract Syntax Tree generation and the ASTNode class hierarchy. This function
+	/// will also handle the code generation and optimization of Procedure Division code.
+	///
+	int ProcedureHandler();
+
+	///
+	/// Stores the String value of the most recent String token.
+	///
 	std::string strVal = "";
-	double douVal = 0.0;
+
+	///
+	/// Stores the numerical value of the most recent numerical token.
+	///
 	int intVal= 0;
 
-	/**
-	 * Handles Procedure Division
-	 */
-	int ProcedureHandler();
 };
 
 #endif /* DRIVER_H */

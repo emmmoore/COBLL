@@ -20,6 +20,7 @@ Driver::Driver() {
 }
 
 Driver::Driver(const Driver& other) {
+	this->filename = other.filename;
 	linenumber = other.linenumber;
 	Program = other.Program;
 	line = "";

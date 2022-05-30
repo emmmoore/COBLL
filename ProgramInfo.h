@@ -40,5 +40,4 @@ struct ProgramInfo {
 };
 
 
-
 #endif /* PROGRAMINFO_H_ */

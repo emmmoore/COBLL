@@ -1,36 +1,80 @@
 \hypertarget{class_driver}{}\doxysection{Driver Class Reference}
 \label{class_driver}\index{Driver@{Driver}}
+
+
+{\ttfamily \#include $<$Driver.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_driver_af0658d103e3e810a8e9ef0a53bb2e261}{Driver}} ()
 \item 
-\mbox{\Hypertarget{class_driver_a46111d556c426d0626fb2a240bc29c10}\label{class_driver_a46111d556c426d0626fb2a240bc29c10}} 
-{\bfseries Driver} (std\+::string File\+Name)
+\mbox{\hyperlink{class_driver_a951561c51f7f381e5c33eadddf715a43}{Driver}} (const \mbox{\hyperlink{class_driver}{Driver}} \&other)
 \item 
-\mbox{\Hypertarget{class_driver_a951561c51f7f381e5c33eadddf715a43}\label{class_driver_a951561c51f7f381e5c33eadddf715a43}} 
-{\bfseries Driver} (const \mbox{\hyperlink{class_driver}{Driver}} \&other)
+\mbox{\hyperlink{class_driver_a46111d556c426d0626fb2a240bc29c10}{Driver}} (std\+::string File\+Name)
 \item 
-\mbox{\Hypertarget{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}\label{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}} 
-int {\bfseries Compile} ()
+int \mbox{\hyperlink{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}{Compile}} ()
 \item 
-\mbox{\Hypertarget{class_driver_a207294fe98a2b4b75e91d2621302c623}\label{class_driver_a207294fe98a2b4b75e91d2621302c623}} 
-\mbox{\hyperlink{class_driver}{Driver}} \& {\bfseries operator=} (\mbox{\hyperlink{class_driver}{Driver}} other)
+\mbox{\hyperlink{class_driver}{Driver}} \& \mbox{\hyperlink{class_driver_a207294fe98a2b4b75e91d2621302c623}{operator=}} (\mbox{\hyperlink{class_driver}{Driver}} other)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Controls the reading and compilation of a COBOL file, start to finish.
+
+When constructed, a \mbox{\hyperlink{class_driver}{Driver}} identifies the location of each COBOL division present in the file. To compile, the Compile function then calls its own handler function for each division, which lexes, parses, generates code for, and optimizes for that division. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_driver_af0658d103e3e810a8e9ef0a53bb2e261}\label{class_driver_af0658d103e3e810a8e9ef0a53bb2e261}} 
 \index{Driver@{Driver}!Driver@{Driver}}
 \index{Driver@{Driver}!Driver@{Driver}}
-\doxysubsubsection{\texorpdfstring{Driver()}{Driver()}}
+\doxysubsubsection{\texorpdfstring{Driver()}{Driver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-No-\/args constructor 
+Constructs a generic \mbox{\hyperlink{class_driver}{Driver}} not corresponding to a file. \mbox{\Hypertarget{class_driver_a951561c51f7f381e5c33eadddf715a43}\label{class_driver_a951561c51f7f381e5c33eadddf715a43}} 
+\index{Driver@{Driver}!Driver@{Driver}}
+\index{Driver@{Driver}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{Driver()}{Driver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_driver}{Driver}} \&}]{other }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{class_driver}{Driver}} as a copy of another \mbox{\hyperlink{class_driver}{Driver}}.
+
+The \mbox{\hyperlink{class_driver}{Driver}} constructed gets the filename, program information, division information and line number from the \mbox{\hyperlink{class_driver}{Driver}} being copied. 
+\begin{DoxyParams}{Parameters}
+{\em \&other} & the \mbox{\hyperlink{class_driver}{Driver}} to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_driver_a46111d556c426d0626fb2a240bc29c10}\label{class_driver_a46111d556c426d0626fb2a240bc29c10}} 
+\index{Driver@{Driver}!Driver@{Driver}}
+\index{Driver@{Driver}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{Driver()}{Driver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Name }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{class_driver}{Driver}} from a given file name. 
+\begin{DoxyParams}{Parameters}
+{\em File\+Name} & The name of the COBOL file to be compiled. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}\label{class_driver_a2e611fdf8ce2f4f24737cae3fb54954a}} 
+\index{Driver@{Driver}!Compile@{Compile}}
+\index{Compile@{Compile}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily int Driver\+::\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compiles the file. \mbox{\Hypertarget{class_driver_a207294fe98a2b4b75e91d2621302c623}\label{class_driver_a207294fe98a2b4b75e91d2621302c623}} 
+\index{Driver@{Driver}!operator=@{operator=}}
+\index{operator=@{operator=}!Driver@{Driver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_driver}{Driver}} \& Driver\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_driver}{Driver}}}]{other }\end{DoxyParamCaption})}
+
+Overrides the implicit copy assignment operator. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Driver.\+h\item 
+\mbox{\hyperlink{_driver_8h}{Driver.\+h}}\item 
 \mbox{\hyperlink{_driver_8cpp}{Driver.\+cpp}}\item 
 Identification\+Handler.\+cpp\item 
 Procedure\+Handler.\+cpp\end{DoxyCompactItemize}

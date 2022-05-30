@@ -68,27 +68,28 @@ $(function() {
   <div class="headertitle"><div class="title">Driver Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_driver_8h_source.html">Driver.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af0658d103e3e810a8e9ef0a53bb2e261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_driver.html#af0658d103e3e810a8e9ef0a53bb2e261">Driver</a> ()</td></tr>
 <tr class="separator:af0658d103e3e810a8e9ef0a53bb2e261"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46111d556c426d0626fb2a240bc29c10"><td class="memItemLeft" align="right" valign="top"><a id="a46111d556c426d0626fb2a240bc29c10" name="a46111d556c426d0626fb2a240bc29c10"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Driver</b> (std::string FileName)</td></tr>
-<tr class="separator:a46111d556c426d0626fb2a240bc29c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a951561c51f7f381e5c33eadddf715a43"><td class="memItemLeft" align="right" valign="top"><a id="a951561c51f7f381e5c33eadddf715a43" name="a951561c51f7f381e5c33eadddf715a43"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Driver</b> (const <a class="el" href="class_driver.html">Driver</a> &amp;other)</td></tr>
+<tr class="memitem:a951561c51f7f381e5c33eadddf715a43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_driver.html#a951561c51f7f381e5c33eadddf715a43">Driver</a> (const <a class="el" href="class_driver.html">Driver</a> &amp;other)</td></tr>
 <tr class="separator:a951561c51f7f381e5c33eadddf715a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e611fdf8ce2f4f24737cae3fb54954a"><td class="memItemLeft" align="right" valign="top"><a id="a2e611fdf8ce2f4f24737cae3fb54954a" name="a2e611fdf8ce2f4f24737cae3fb54954a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Compile</b> ()</td></tr>
+<tr class="memitem:a46111d556c426d0626fb2a240bc29c10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_driver.html#a46111d556c426d0626fb2a240bc29c10">Driver</a> (std::string FileName)</td></tr>
+<tr class="separator:a46111d556c426d0626fb2a240bc29c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e611fdf8ce2f4f24737cae3fb54954a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_driver.html#a2e611fdf8ce2f4f24737cae3fb54954a">Compile</a> ()</td></tr>
 <tr class="separator:a2e611fdf8ce2f4f24737cae3fb54954a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207294fe98a2b4b75e91d2621302c623"><td class="memItemLeft" align="right" valign="top"><a id="a207294fe98a2b4b75e91d2621302c623" name="a207294fe98a2b4b75e91d2621302c623"></a>
-<a class="el" href="class_driver.html">Driver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_driver.html">Driver</a> other)</td></tr>
+<tr class="memitem:a207294fe98a2b4b75e91d2621302c623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_driver.html">Driver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_driver.html#a207294fe98a2b4b75e91d2621302c623">operator=</a> (<a class="el" href="class_driver.html">Driver</a> other)</td></tr>
 <tr class="separator:a207294fe98a2b4b75e91d2621302c623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Controls the reading and compilation of a COBOL file, start to finish.</p>
+<p >When constructed, a <a class="el" href="class_driver.html">Driver</a> identifies the location of each COBOL division present in the file. To compile, the Compile function then calls its own handler function for each division, which lexes, parses, generates code for, and optimizes for that division. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af0658d103e3e810a8e9ef0a53bb2e261" name="af0658d103e3e810a8e9ef0a53bb2e261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0658d103e3e810a8e9ef0a53bb2e261">&#9670;&nbsp;</a></span>Driver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af0658d103e3e810a8e9ef0a53bb2e261">&#9670;&nbsp;</a></span>Driver() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,7 +102,94 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>Compile</b> ()</td></t
         </tr>
       </table>
 </div><div class="memdoc">
-<p >No-args constructor </p>
+<p >Constructs a generic <a class="el" href="class_driver.html">Driver</a> not corresponding to a file. </p>
+
+</div>
+</div>
+<a id="a951561c51f7f381e5c33eadddf715a43" name="a951561c51f7f381e5c33eadddf715a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951561c51f7f381e5c33eadddf715a43">&#9670;&nbsp;</a></span>Driver() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Driver::Driver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_driver.html">Driver</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Constructs a <a class="el" href="class_driver.html">Driver</a> as a copy of another <a class="el" href="class_driver.html">Driver</a>.</p>
+<p >The <a class="el" href="class_driver.html">Driver</a> constructed gets the filename, program information, division information and line number from the <a class="el" href="class_driver.html">Driver</a> being copied. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;other</td><td>the <a class="el" href="class_driver.html">Driver</a> to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46111d556c426d0626fb2a240bc29c10" name="a46111d556c426d0626fb2a240bc29c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46111d556c426d0626fb2a240bc29c10">&#9670;&nbsp;</a></span>Driver() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Driver::Driver </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>FileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Constructs a <a class="el" href="class_driver.html">Driver</a> from a given file name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FileName</td><td>The name of the COBOL file to be compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e611fdf8ce2f4f24737cae3fb54954a" name="a2e611fdf8ce2f4f24737cae3fb54954a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e611fdf8ce2f4f24737cae3fb54954a">&#9670;&nbsp;</a></span>Compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Driver::Compile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Compiles the file. </p>
+
+</div>
+</div>
+<a id="a207294fe98a2b4b75e91d2621302c623" name="a207294fe98a2b4b75e91d2621302c623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207294fe98a2b4b75e91d2621302c623">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_driver.html">Driver</a> &amp; Driver::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_driver.html">Driver</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Overrides the implicit copy assignment operator. </p>
 
 </div>
 </div>
