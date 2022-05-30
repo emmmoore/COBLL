@@ -15,12 +15,12 @@ int main(int argc, char *argv[]) {
 
 	std::cout << "Working..." << std::endl;
 
-	// Declare array of drivers
+	// Declares array of drivers.
 	Driver *drivers[argc];
 
-	// Initialize the array of drivers and attempt to compile
+	// Initializes the array of drivers and attempt to compile.
 	for (int i = 1; i < argc; i++) {
-		// Check the file is a COBOL file
+		// Checks the file is a COBOL file.
 		std::regex fileformat ("^[a-zA-Z0-9]*.(cbl|CBL|cob|COB|cobol|COBOL)$");
 		if (!std::regex_match(argv[i], fileformat)) {
 
@@ -29,11 +29,11 @@ int main(int argc, char *argv[]) {
 			return 1;
 		}
 
-		// Construct the driver
+		// Constructs the driver.
 		Driver temp = Driver(argv[i]);
 		drivers[i] = &temp;
 
-		// Compile the file
+		// Compiles the file.
 		int status = (*drivers[i]).Compile();
 		if (status != 0) {
 
