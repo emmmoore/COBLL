@@ -1,20 +1,25 @@
-/*
- * COBLL.cpp
- *
- *  Created on: Apr 21, 2022
- *      Author: elanor
- */
+///
+/// \file
+/// This file contains the main function of COBLL, which takes in COBOL file names from the command line and compiles them.
+/// @author Elanor Moore
+///
+///
 
 #include <iostream>
 #include <regex>
 #include "Driver.h"
-// --------- MAIN FUNCTION ---------
+///
+/// Takes in command-line arguments representing COBOL file names, and compiles the corresponding COBOL files.
+/// @returns 1 if a non-COBOL file is supplied or a file cannot be compiled; 0 otherwise.
+///
 int main(int argc, char *argv[]) {
-	// Initialize and exectue Drivers for command-line file arguments
+
 	std::cout << "Working..." << std::endl;
 
+	// Declare array of drivers
 	Driver *drivers[argc];
 
+	// Initialize the array of drivers and attempt to compile
 	for (int i = 1; i < argc; i++) {
 		// Check the file is a COBOL file
 		std::regex fileformat ("^[a-zA-Z0-9]*.(cbl|CBL|cob|COB|cobol|COBOL)$");

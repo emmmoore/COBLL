@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variablenode_0',['VariableNode',['../class_variable_node.html#a75dc12ea1fa8e0b5ee3b43fcbda3898f',1,'VariableNode']]]
+  ['stringlitnode_0',['StringLitNode',['../class_string_lit_node.html#aef7712c39de4b3f59b4c146e7f339d11',1,'StringLitNode']]]
 ];
