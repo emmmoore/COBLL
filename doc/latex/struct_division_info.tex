@@ -1,31 +1,87 @@
 \hypertarget{struct_division_info}{}\doxysection{Division\+Info Struct Reference}
 \label{struct_division_info}\index{DivisionInfo@{DivisionInfo}}
+
+
+{\ttfamily \#include $<$Division\+Info.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_division_info_af0810aca724de1280d13ce1645c0345e}\label{struct_division_info_af0810aca724de1280d13ce1645c0345e}} 
-{\bfseries Division\+Info} (const \mbox{\hyperlink{struct_division_info}{Division\+Info}} \&di)
+\mbox{\hyperlink{struct_division_info_ac4dbecd0be45e12d63b1472847edcb0d}{Division\+Info}} ()
+\item 
+\mbox{\hyperlink{struct_division_info_a8cb351ab640ec706f1caec96988da12a}{Division\+Info}} (const \mbox{\hyperlink{struct_division_info}{Division\+Info}} \&other)
 \item 
 \mbox{\Hypertarget{struct_division_info_a49b80aa81ecbc63193d51ea8a6621ab0}\label{struct_division_info_a49b80aa81ecbc63193d51ea8a6621ab0}} 
 \mbox{\hyperlink{struct_division_info}{Division\+Info}} \& {\bfseries operator=} (\mbox{\hyperlink{struct_division_info}{Division\+Info}} other)
 \item 
-\mbox{\Hypertarget{struct_division_info_a8475543d35f19d719f776814480e2e43}\label{struct_division_info_a8475543d35f19d719f776814480e2e43}} 
-std\+::string {\bfseries to\+\_\+string} ()
+std\+::string \mbox{\hyperlink{struct_division_info_a8475543d35f19d719f776814480e2e43}{to\+\_\+string}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_division_info_a2582eafc5f95ddb6a97075d3b979cc8e}\label{struct_division_info_a2582eafc5f95ddb6a97075d3b979cc8e}} 
-std\+::string {\bfseries name}
+std\+::string \mbox{\hyperlink{struct_division_info_a2582eafc5f95ddb6a97075d3b979cc8e}{name}}
 \item 
-\mbox{\Hypertarget{struct_division_info_aa86cf29354a4c38ae195bd55e2769c9c}\label{struct_division_info_aa86cf29354a4c38ae195bd55e2769c9c}} 
-int {\bfseries startline}
+int \mbox{\hyperlink{struct_division_info_aa86cf29354a4c38ae195bd55e2769c9c}{startline}}
 \item 
-\mbox{\Hypertarget{struct_division_info_aea9f8277fe4cbaf989a31b0abf0a781a}\label{struct_division_info_aea9f8277fe4cbaf989a31b0abf0a781a}} 
-int {\bfseries endline}
+int \mbox{\hyperlink{struct_division_info_aea9f8277fe4cbaf989a31b0abf0a781a}{endline}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A structure to represent information about a division. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_division_info_ac4dbecd0be45e12d63b1472847edcb0d}\label{struct_division_info_ac4dbecd0be45e12d63b1472847edcb0d}} 
+\index{DivisionInfo@{DivisionInfo}!DivisionInfo@{DivisionInfo}}
+\index{DivisionInfo@{DivisionInfo}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{DivisionInfo()}{DivisionInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Division\+Info\+::\+Division\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a nameless \mbox{\hyperlink{struct_division_info}{Division\+Info}} with starting and ending lines of -\/1. \mbox{\Hypertarget{struct_division_info_a8cb351ab640ec706f1caec96988da12a}\label{struct_division_info_a8cb351ab640ec706f1caec96988da12a}} 
+\index{DivisionInfo@{DivisionInfo}!DivisionInfo@{DivisionInfo}}
+\index{DivisionInfo@{DivisionInfo}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{DivisionInfo()}{DivisionInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Division\+Info\+::\+Division\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_division_info}{Division\+Info}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \mbox{\hyperlink{struct_division_info}{Division\+Info}} from another \mbox{\hyperlink{struct_division_info}{Division\+Info}}, essentially creating this as a copy of the other. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{struct_division_info}{Division\+Info}} to be copied from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_division_info_a8475543d35f19d719f776814480e2e43}\label{struct_division_info_a8475543d35f19d719f776814480e2e43}} 
+\index{DivisionInfo@{DivisionInfo}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string Division\+Info\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a String representation of a \mbox{\hyperlink{struct_division_info}{Division\+Info}} containing the information in its fields.
+
+Example\+: A representation for a division named \char`\"{}\+My Division\char`\"{} with starting and ending lines 9 and 20\+: \char`\"{}\+My Division\+: \mbox{[}9, 20\mbox{]}\char`\"{} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_division_info_aea9f8277fe4cbaf989a31b0abf0a781a}\label{struct_division_info_aea9f8277fe4cbaf989a31b0abf0a781a}} 
+\index{DivisionInfo@{DivisionInfo}!endline@{endline}}
+\index{endline@{endline}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{endline}{endline}}
+{\footnotesize\ttfamily int Division\+Info\+::endline}
+
+This division\textquotesingle{}s ending line. \mbox{\Hypertarget{struct_division_info_a2582eafc5f95ddb6a97075d3b979cc8e}\label{struct_division_info_a2582eafc5f95ddb6a97075d3b979cc8e}} 
+\index{DivisionInfo@{DivisionInfo}!name@{name}}
+\index{name@{name}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Division\+Info\+::name}
+
+The name of this division. \mbox{\Hypertarget{struct_division_info_aa86cf29354a4c38ae195bd55e2769c9c}\label{struct_division_info_aa86cf29354a4c38ae195bd55e2769c9c}} 
+\index{DivisionInfo@{DivisionInfo}!startline@{startline}}
+\index{startline@{startline}!DivisionInfo@{DivisionInfo}}
+\doxysubsubsection{\texorpdfstring{startline}{startline}}
+{\footnotesize\ttfamily int Division\+Info\+::startline}
+
+This division\textquotesingle{}s starting line. 
+
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Division\+Info.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_division_info_8h}{Division\+Info.\+h}}\end{DoxyCompactItemize}

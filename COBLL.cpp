@@ -3,7 +3,6 @@
 /// This file contains the main function of COBLL, which takes in COBOL file names from the command line and compiles them.
 /// @author Elanor Moore
 ///
-///
 
 #include <iostream>
 #include <regex>

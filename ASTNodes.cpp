@@ -92,6 +92,7 @@ public:
 
 ///
 /// An Abstract Syntax Tree node representing the header of a function.
+///
 /// Contains information about the name and arguments of the function, not its functionality.
 ///
 class FnHeaderNode : ASTNode {
@@ -116,6 +117,7 @@ public:
 
 ///
 /// An Abstract Syntax Tree node representing a function.
+///
 /// Contains information about what the function does (its body), as well as its name and arguments (its header).
 ///
 class FnNode : ASTNode {

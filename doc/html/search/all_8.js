@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['programinfo_0',['ProgramInfo',['../struct_program_info.html',1,'']]]
+  ['organization_0',['Organization',['../md__organization.html',1,'']]]
 ];
