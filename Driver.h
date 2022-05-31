@@ -49,11 +49,9 @@ public:
 	///
 	/// Overrides the implicit copy assignment operator.
 	///
-
 	Driver& operator=(Driver other);
-private:
-	/// -------- NON-DIVISION-SPECIFIC -------- ///
 
+private:
 	///
 	/// Stores the division information for each COBOL division.
 	///
