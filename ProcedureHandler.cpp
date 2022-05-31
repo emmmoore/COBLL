@@ -1,9 +1,11 @@
-/*
- * ProcedureHandler.cpp
- *
- *  Created on: Apr 27, 2022
- *      Author: elanor
- */
+///
+/// \file
+/// This file contains the functions of the Driver class relevant to the Procedure Division.
+///
+/// This file is currently in progress and is the main focus of current work.
+/// @author Elanor Moore
+///
+
 #include "Driver.h"
 #include "ASTNodes.cpp"
 
@@ -11,6 +13,9 @@
 // TODO: Create node for extern to C's `printf`
 // TODO: Create functionality to generate tree
 
+///
+/// Specifies the types of tokens the procedure parser can handle.
+///
 enum ProcToken {
 	empty,
 	display,
@@ -22,17 +27,17 @@ enum ProcToken {
 namespace {
 	static ProcToken gettok(std::ifstream& inputstream) {
 
-		// Handle EOF
+		// Handles EOF.
 		if (inputstream.peek() == EOF)
 			return eof;
 		char c = "\0";
 		std::string value = "";
 
-		// Ignore whitespace up to next token
+		// Ignores whitespace up to next token.
 		while (isspace(c))
 				inputstream.get(c);
 
-		// Handle string literals (cannot use spaces as delimiters)
+		// Handles string literals (cannot use spaces as delimiters).
 		if (c == "\"") {
 			inputstream.get(c); // Opening "
 			while (inputstream.peek() != EOF && c != "\"") {
@@ -41,14 +46,14 @@ namespace {
 			}
 			inputstream.get(c); // Closing "
 			return strlit;
-		} else { // Handle non-string tokens (space-sensitive)
+		} else { // Handles non-string tokens (space-sensitive).
 			value += c;
 			while (inputstream.peek() != EOF && isalpha(inputstream.peek())) {
 				inputstream.get(c);
 				value += c;
 			}
 
-			// Identify and return token
+			// Identifies and returns token.
 			if (value == "DISPLAY")
 				return display;
 		}

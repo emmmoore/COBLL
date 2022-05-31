@@ -9,7 +9,7 @@
 \item 
 \mbox{\hyperlink{struct_program_info_aee4aecc3d8d4e926e18e64ff694ed330}{Program\+Info}} ()
 \item 
-\mbox{\hyperlink{struct_program_info_a519ee2709f5b6dac7c56c55351fcc710}{Program\+Info}} (const \mbox{\hyperlink{struct_program_info}{Program\+Info}} \&pi)
+\mbox{\hyperlink{struct_program_info_affe4cd44696d158e8f0a6e635ea0bc82}{Program\+Info}} (const \mbox{\hyperlink{struct_program_info}{Program\+Info}} \&other)
 \item 
 \mbox{\hyperlink{struct_program_info}{Program\+Info}} \& \mbox{\hyperlink{struct_program_info_aae0698f03c911ecd9a66ea03548949da}{operator=}} (\mbox{\hyperlink{struct_program_info}{Program\+Info}} other)
 \item 
@@ -32,6 +32,11 @@ std\+::string \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A structure to represent information about the program being compiled.
+
+Information within the structure comes form the source file\textquotesingle{}s Identification Division. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{struct_program_info_aee4aecc3d8d4e926e18e64ff694ed330}\label{struct_program_info_aee4aecc3d8d4e926e18e64ff694ed330}} 
 \index{ProgramInfo@{ProgramInfo}!ProgramInfo@{ProgramInfo}}
@@ -39,12 +44,17 @@ std\+::string \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f
 \doxysubsubsection{\texorpdfstring{ProgramInfo()}{ProgramInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Program\+Info\+::\+Program\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{struct_program_info_a519ee2709f5b6dac7c56c55351fcc710}\label{struct_program_info_a519ee2709f5b6dac7c56c55351fcc710}} 
+Constructs a nameless \mbox{\hyperlink{struct_program_info}{Program\+Info}} with default (\char`\"{}\+Unspecified\char`\"{}) values. \mbox{\Hypertarget{struct_program_info_affe4cd44696d158e8f0a6e635ea0bc82}\label{struct_program_info_affe4cd44696d158e8f0a6e635ea0bc82}} 
 \index{ProgramInfo@{ProgramInfo}!ProgramInfo@{ProgramInfo}}
 \index{ProgramInfo@{ProgramInfo}!ProgramInfo@{ProgramInfo}}
 \doxysubsubsection{\texorpdfstring{ProgramInfo()}{ProgramInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Program\+Info\+::\+Program\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_program_info}{Program\+Info}} \&}]{pi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Program\+Info\+::\+Program\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_program_info}{Program\+Info}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Constructs a \mbox{\hyperlink{struct_program_info}{Program\+Info}} from another \mbox{\hyperlink{struct_program_info}{Program\+Info}}, essentially creating this as a copy of the other. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{struct_program_info}{Program\+Info}} to be copied from. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -54,7 +64,7 @@ std\+::string \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_program_info}{Program\+Info}} \& Program\+Info\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_program_info}{Program\+Info}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}\label{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}} 
+Overrides the implicit copy assignment operator. \mbox{\Hypertarget{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}\label{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}} 
 \index{ProgramInfo@{ProgramInfo}!to\_string@{to\_string}}
 \index{to\_string@{to\_string}!ProgramInfo@{ProgramInfo}}
 \doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}

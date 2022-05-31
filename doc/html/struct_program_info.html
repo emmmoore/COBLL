@@ -76,8 +76,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aee4aecc3d8d4e926e18e64ff694ed330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#aee4aecc3d8d4e926e18e64ff694ed330">ProgramInfo</a> ()</td></tr>
 <tr class="separator:aee4aecc3d8d4e926e18e64ff694ed330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519ee2709f5b6dac7c56c55351fcc710"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#a519ee2709f5b6dac7c56c55351fcc710">ProgramInfo</a> (const <a class="el" href="struct_program_info.html">ProgramInfo</a> &amp;pi)</td></tr>
-<tr class="separator:a519ee2709f5b6dac7c56c55351fcc710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe4cd44696d158e8f0a6e635ea0bc82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#affe4cd44696d158e8f0a6e635ea0bc82">ProgramInfo</a> (const <a class="el" href="struct_program_info.html">ProgramInfo</a> &amp;other)</td></tr>
+<tr class="separator:affe4cd44696d158e8f0a6e635ea0bc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae0698f03c911ecd9a66ea03548949da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_program_info.html">ProgramInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#aae0698f03c911ecd9a66ea03548949da">operator=</a> (<a class="el" href="struct_program_info.html">ProgramInfo</a> other)</td></tr>
 <tr class="separator:aae0698f03c911ecd9a66ea03548949da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6391841f5a3c623d09af16c671bd5b80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#a6391841f5a3c623d09af16c671bd5b80">to_string</a> ()</td></tr>
@@ -98,7 +98,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab5283d338c29ad2b98d888df075f629a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html#ab5283d338c29ad2b98d888df075f629a">security</a></td></tr>
 <tr class="separator:ab5283d338c29ad2b98d888df075f629a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A structure to represent information about the program being compiled.</p>
+<p >Information within the structure comes form the source file's Identification Division. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aee4aecc3d8d4e926e18e64ff694ed330" name="aee4aecc3d8d4e926e18e64ff694ed330"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee4aecc3d8d4e926e18e64ff694ed330">&#9670;&nbsp;</a></span>ProgramInfo() <span class="overload">[1/2]</span></h2>
 
@@ -121,11 +124,12 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Constructs a nameless <a class="el" href="struct_program_info.html">ProgramInfo</a> with default ("Unspecified") values. </p>
 
 </div>
 </div>
-<a id="a519ee2709f5b6dac7c56c55351fcc710" name="a519ee2709f5b6dac7c56c55351fcc710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a519ee2709f5b6dac7c56c55351fcc710">&#9670;&nbsp;</a></span>ProgramInfo() <span class="overload">[2/2]</span></h2>
+<a id="affe4cd44696d158e8f0a6e635ea0bc82" name="affe4cd44696d158e8f0a6e635ea0bc82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe4cd44696d158e8f0a6e635ea0bc82">&#9670;&nbsp;</a></span>ProgramInfo() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +141,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">ProgramInfo::ProgramInfo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_program_info.html">ProgramInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>pi</em></td><td>)</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -147,6 +151,12 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Constructs a <a class="el" href="struct_program_info.html">ProgramInfo</a> from another <a class="el" href="struct_program_info.html">ProgramInfo</a>, essentially creating this as a copy of the other. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="struct_program_info.html">ProgramInfo</a> to be copied from. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -174,6 +184,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Overrides the implicit copy assignment operator. </p>
 
 </div>
 </div>

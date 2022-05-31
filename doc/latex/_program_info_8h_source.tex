@@ -1,12 +1,8 @@
 \hypertarget{_program_info_8h_source}{}\doxysection{Program\+Info.\+h}
 \mbox{\hyperlink{_program_info_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{/*}}
-\DoxyCodeLine{2 \textcolor{comment}{ * ProgramInfo.h}}
-\DoxyCodeLine{3 \textcolor{comment}{ *}}
-\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: May 16, 2022}}
-\DoxyCodeLine{5 \textcolor{comment}{ *      Author: elanor}}
-\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 }
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
@@ -14,48 +10,50 @@
 \DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef PROGRAMINFO\_H\_}}
 \DoxyCodeLine{12 \textcolor{preprocessor}{\#define PROGRAMINFO\_H\_}}
 \DoxyCodeLine{13 }
-\DoxyCodeLine{14 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_program_info}{ProgramInfo}} \{}
-\DoxyCodeLine{15     std::string \mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}};}
-\DoxyCodeLine{16     std::string \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}};}
-\DoxyCodeLine{17     std::string \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}};}
-\DoxyCodeLine{18     std::string \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}};}
-\DoxyCodeLine{19     std::string \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}};}
-\DoxyCodeLine{20     std::string \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}};}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22     \mbox{\hyperlink{struct_program_info_aee4aecc3d8d4e926e18e64ff694ed330}{ProgramInfo}}() \{}
-\DoxyCodeLine{23         \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}Unspecified Program"{}};}
-\DoxyCodeLine{24         \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}} = \textcolor{stringliteral}{"{}Unspecified Author"{}};}
-\DoxyCodeLine{25         \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}} = \textcolor{stringliteral}{"{}Unspecified Installation"{}};}
-\DoxyCodeLine{26         \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}} = \textcolor{stringliteral}{"{}Unspecified Date Written"{}};}
-\DoxyCodeLine{27         \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}} = \textcolor{stringliteral}{"{}Unspecified Date Compiled"{}};}
-\DoxyCodeLine{28         \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}} = \textcolor{stringliteral}{"{}Unspecified Security"{}};}
-\DoxyCodeLine{29     \}}
-\DoxyCodeLine{30     \mbox{\hyperlink{struct_program_info_a519ee2709f5b6dac7c56c55351fcc710}{ProgramInfo}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& pi): \mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}}(pi.\mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}}) \{\}}
-\DoxyCodeLine{31     \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& \mbox{\hyperlink{struct_program_info_aae0698f03c911ecd9a66ea03548949da}{operator=}}(\mbox{\hyperlink{struct_program_info}{ProgramInfo}} other) \{}
-\DoxyCodeLine{32         this-\/>\textcolor{keywordtype}{id} = other.\mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}};}
-\DoxyCodeLine{33         this-\/>author = other.\mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}};}
-\DoxyCodeLine{34         this-\/>installation = other.\mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}};}
-\DoxyCodeLine{35         this-\/>datewritten = other.\mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}};}
-\DoxyCodeLine{36         this-\/>datecompiled = other.\mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}};}
-\DoxyCodeLine{37         this-\/>security = other.\mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}};}
-\DoxyCodeLine{38         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{39     \}}
-\DoxyCodeLine{40 }
-\DoxyCodeLine{46     std::string \mbox{\hyperlink{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}{to\_string}}() \{}
-\DoxyCodeLine{47         std::string info = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49         info += \textcolor{stringliteral}{"{}Program ID: "{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{50         info += \textcolor{stringliteral}{"{}Author: "{}} + \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{51         info += \textcolor{stringliteral}{"{}Installation: "{}} + \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{52         info += \textcolor{stringliteral}{"{}Date Written: "{}} + \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{53         info += \textcolor{stringliteral}{"{}Date Compiled: "{}} + \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{54         info += \textcolor{stringliteral}{"{}Security: "{}} + \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56         \textcolor{keywordflow}{return} info;}
-\DoxyCodeLine{57     \}}
-\DoxyCodeLine{58 \};}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PROGRAMINFO\_H\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{19 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_program_info}{ProgramInfo}} \{}
+\DoxyCodeLine{20     std::string \mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}};}
+\DoxyCodeLine{21     std::string \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}};}
+\DoxyCodeLine{22     std::string \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}};}
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}};}
+\DoxyCodeLine{24     std::string \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}};}
+\DoxyCodeLine{25     std::string \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_program_info_aee4aecc3d8d4e926e18e64ff694ed330}{ProgramInfo}}() \{}
+\DoxyCodeLine{31         \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}Unspecified Program"{}};}
+\DoxyCodeLine{32         \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}} = \textcolor{stringliteral}{"{}Unspecified Author"{}};}
+\DoxyCodeLine{33         \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}} = \textcolor{stringliteral}{"{}Unspecified Installation"{}};}
+\DoxyCodeLine{34         \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}} = \textcolor{stringliteral}{"{}Unspecified Date Written"{}};}
+\DoxyCodeLine{35         \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}} = \textcolor{stringliteral}{"{}Unspecified Date Compiled"{}};}
+\DoxyCodeLine{36         \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}} = \textcolor{stringliteral}{"{}Unspecified Security"{}};}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \mbox{\hyperlink{struct_program_info_affe4cd44696d158e8f0a6e635ea0bc82}{ProgramInfo}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& other): \mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}}(other.\mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}}) \{\}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \mbox{\hyperlink{struct_program_info}{ProgramInfo}}\& \mbox{\hyperlink{struct_program_info_aae0698f03c911ecd9a66ea03548949da}{operator=}}(\mbox{\hyperlink{struct_program_info}{ProgramInfo}} other) \{}
+\DoxyCodeLine{49         this-\/>\textcolor{keywordtype}{id} = other.\mbox{\hyperlink{struct_program_info_a3f2a5bc252045327dc723d0ef983412f}{id}};}
+\DoxyCodeLine{50         this-\/>author = other.\mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}};}
+\DoxyCodeLine{51         this-\/>installation = other.\mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}};}
+\DoxyCodeLine{52         this-\/>datewritten = other.\mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}};}
+\DoxyCodeLine{53         this-\/>datecompiled = other.\mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}};}
+\DoxyCodeLine{54         this-\/>security = other.\mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}};}
+\DoxyCodeLine{55         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{63     std::string \mbox{\hyperlink{struct_program_info_a6391841f5a3c623d09af16c671bd5b80}{to\_string}}() \{}
+\DoxyCodeLine{64         std::string info = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         info += \textcolor{stringliteral}{"{}Program ID: "{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{67         info += \textcolor{stringliteral}{"{}Author: "{}} + \mbox{\hyperlink{struct_program_info_a58c48a07ab62f1f56ca5ff21f4e68f8a}{author}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{68         info += \textcolor{stringliteral}{"{}Installation: "{}} + \mbox{\hyperlink{struct_program_info_a94f3805f42e5a01fd69eb036b38b40af}{installation}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{69         info += \textcolor{stringliteral}{"{}Date Written: "{}} + \mbox{\hyperlink{struct_program_info_a303856986dfc238dc695a04887a57899}{datewritten}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{70         info += \textcolor{stringliteral}{"{}Date Compiled: "{}} + \mbox{\hyperlink{struct_program_info_a20dcbb59ffb1c34f6ff174b2c68d23de}{datecompiled}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{71         info += \textcolor{stringliteral}{"{}Security: "{}} + \mbox{\hyperlink{struct_program_info_ab5283d338c29ad2b98d888df075f629a}{security}} + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PROGRAMINFO\_H\_ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}
