@@ -2,7 +2,7 @@
 # Introduction
 COBLL is (aspirationally) an LLVM-based compiler for COBOL. 
 
-Doxygen documentation of the code for COBLL can be found in `docs`. A brief and informal text-based description of the layout, focusing on the `Driver` class, can also be found in `Organization.md`. 
+Doxygen documentation of the code for COBLL can be found in `doc`. A brief and informal text-based description of the layout, focusing on the `Driver` class, can also be found in `doc/Organization.md`. Sources can also be found in `doc/Sources`
 
 Currently there are no COBLL releases. COBLL can be run by cloning the repository, compiling the `cpp` files, and running `./a.out [NAMES OF 1+ COBOL FILES]` from the command line.
 
