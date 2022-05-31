@@ -1,9 +1,9 @@
-/*
- * ProgramInfo.h
- *
- *  Created on: May 16, 2022
- *      Author: elanor
- */
+///
+/// \file
+/// This file contains the declaration of the ProgramInfo struct.
+/// @author Elanor Moore
+///
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -11,6 +11,11 @@
 #ifndef PROGRAMINFO_H_
 #define PROGRAMINFO_H_
 
+///
+/// A structure to represent information about the program being compiled.
+///
+/// Information within the structure comes form the source file's Identification Division.
+///
 struct ProgramInfo {
 	std::string id;
 	std::string author;
@@ -19,6 +24,9 @@ struct ProgramInfo {
 	std::string datecompiled;
 	std::string security;
 
+	///
+	/// Constructs a nameless ProgramInfo with default ("Unspecified") values.
+	///
 	ProgramInfo() {
 		id = "Unspecified Program";
 		author = "Unspecified Author";
@@ -27,7 +35,16 @@ struct ProgramInfo {
 		datecompiled = "Unspecified Date Compiled";
 		security = "Unspecified Security";
 	}
-	ProgramInfo(const ProgramInfo& pi): id(pi.id) {}
+
+	///
+	/// Constructs a ProgramInfo from another ProgramInfo, essentially creating this as a copy of the other.
+	/// @param other The ProgramInfo to be copied from.
+	///
+	ProgramInfo(const ProgramInfo& other): id(other.id) {}
+
+	///
+	/// Overrides the implicit copy assignment operator.
+	///
 	ProgramInfo& operator=(ProgramInfo other) {
 		this->id = other.id;
 		this->author = other.author;
