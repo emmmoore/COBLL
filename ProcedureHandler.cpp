@@ -9,10 +9,6 @@
 #include "Driver.h"
 #include "ASTNodes.cpp"
 
-// TODO: gettok for displaying strings
-// TODO: Create node for extern to C's `printf`
-// TODO: Create functionality to generate tree
-
 ///
 /// Specifies the types of tokens the procedure parser can handle.
 ///
