@@ -2,11 +2,12 @@
 # Introduction
 COBLL is (aspirationally) an LLVM-based compiler for COBOL. 
 
-This project was initially created for a Computer Science Research & Development course at Phillips Academy. 
-
 Doxygen documentation of the code for COBLL can be found in `docs`. A brief and informal text-based description of the layout, focusing on the `Driver` class, can also be found in `Organization.md`. 
 
 Currently there are no COBLL releases. COBLL can be run by cloning the repository, compiling the `cpp` files, and running `./a.out [NAMES OF 1+ COBOL FILES]` from the command line.
+
+
+This project was initially created for a Computer Science Research & Development course at Phillips Academy. 
 
 # Progress 
 COBOL files have four divisions: The Identification Division, Environment Division, Data Division, and Procedure Division. The Identification Division is the only division which is required in every COBOL file.
