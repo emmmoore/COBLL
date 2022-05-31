@@ -1,4 +1,9 @@
 ///
+/// \mainpage
+/// COBLL is an (aspiring) LLVM-based COBOL compiler.
+///
+/// Navigate through classes and files through the menu above.
+///
 /// \file
 /// This file contains the main function of COBLL, which takes in COBOL file names from the command line and compiles them.
 /// @author Elanor Moore

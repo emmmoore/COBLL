@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7eastnode_0',['~ASTNode',['../class_a_s_t_node.html#aa37a9ffbdfda1c6133506519ad1b6982',1,'ASTNode']]]
+  ['value_0',['value',['../class_string_lit_node.html#a7bff64ae4704ed1549ff3971d3161420',1,'StringLitNode::value()'],['../class_number_node.html#a078efa7b7b1818babb11070d22a5667c',1,'NumberNode::value()']]],
+  ['variablenode_1',['VariableNode',['../class_variable_node.html',1,'VariableNode'],['../class_variable_node.html#a75dc12ea1fa8e0b5ee3b43fcbda3898f',1,'VariableNode::VariableNode()']]]
 ];

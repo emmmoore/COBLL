@@ -1,0 +1,22 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Introduction}\label{md__r_e_a_d_m_e_autotoc_md1}
+COBLL is (aspirationally) an LLVM-\/based compiler for COBOL.
+
+Doxygen documentation of the code for COBLL can be found in {\ttfamily doc}. A brief and informal text-\/based description of the layout, focusing on the {\ttfamily \mbox{\hyperlink{class_driver}{Driver}}} class, can also be found in {\ttfamily doc/\+Organization.\+md}. Sources can also be found in {\ttfamily doc/\+Sources}
+
+Currently there are no COBLL releases. COBLL can be run by cloning the repository, compiling the {\ttfamily cpp} files, and running {\ttfamily ./a.out \mbox{[}NAMES OF 1+ COBOL FILES\mbox{]}} from the command line.
+
+This project was initially created for a Computer Science Research \& Development course at Phillips Academy.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Progress}\label{md__r_e_a_d_m_e_autotoc_md2}
+COBOL files have four divisions\+: The Identification Division, Environment Division, Data Division, and Procedure Division. The Identification Division is the only division which is required in every COBOL file.
+
+COBLL currently supports complete compilation of the Identification Division. The Procedure Division has some lexing functionality, and the nodes for the Abstract Syntax Tree generation are complete. Further work will focus on the Procedure Division, eventually moving to the Environment and Data Divisions.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{To-\/\+Do}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Procedure Division
+\begin{DoxyItemize}
+\item Handle parsing of Procedure Tokens \& AST generation
+\item Procedure Division code generation
+\item Procedure Division optimization
+\end{DoxyItemize}
+\item Support Environment Division
+\item Support Data Division 
+\end{DoxyItemize}
