@@ -1,5 +1,5 @@
 ///
-/// \mainpage
+/// \mainpage COBLL
 /// COBLL is an (aspiring) LLVM-based COBOL compiler.
 ///
 /// Navigate through classes and files through the menu above.
